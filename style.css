@@ -10,3 +10,12 @@ h1, h2, h3, h4, h5, h6, h7 {
 body {
     margin: 0px;
 }
+
+.padd1 {
+    padding: 16px;
+}
+
+#mainHeader {
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+}
