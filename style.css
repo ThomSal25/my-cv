@@ -11,6 +11,11 @@ body {
     margin: 0px;
 }
 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .padd1 {
     padding: 16px;
 }
