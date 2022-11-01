@@ -3,8 +3,35 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
+    :: kann nur font Eigenschaften ändern, keine Funktionen*/
+    background-color: black;
+    color: beige;
+}
+
+#prof-sub-head::after {
+    content: " 🧙‍♂️" /*Windows-Taste + . für Emojis*/
+}
+
 h1, h2, h3, h4, h5, h6, h7 {
     font-family: 'Times New Roman', Times, serif;
+}
+
+nav a {
+    margin-left: 50px; 
+
+}
+
+a:link {
+color: green;
+}
+
+a:hover {
+background-color: aqua;
+}
+
+a:active {
+background-color: red;
 }
 
 body {
@@ -14,31 +41,17 @@ body {
 
 main {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /*Das auto zentriert main in der Mitte*/ 
 }
 
 .padd1 {
-    padding: 16px;
+    padding: 40px;
+        /*border: 1px solid red;*/
 }
 
-nav a {
-        margin-left: 50px; /* Wie kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
-    
-}
 
-a:link {
-    color: green;
-}
 
-a:hover {
-    background-color: aqua;
-}
-
-a:active {
-    background-color: red;
-}
-
-#mainHeader {
+body > header { /*nur header, der direktes child vom body ist*/
     text-align: center;
     background-color: rgb(255, 187, 0);
 }
@@ -47,6 +60,10 @@ main > article {
     margin-top: 50px;
 }
 
-article + article {
+article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
     border-top: 5px solid green;
 }
+
+#contact div { 
+    border: 5px solid red;
+    /*padding: 10px;} So kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
