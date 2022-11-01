@@ -21,7 +21,32 @@ main {
     padding: 16px;
 }
 
+nav a {
+        margin-left: 50px; /* Wie kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
+    
+}
+
+a:link {
+    color: green;
+}
+
+a:hover {
+    background-color: aqua;
+}
+
+a:active {
+    background-color: red;
+}
+
 #mainHeader {
     text-align: center;
     background-color: rgb(255, 187, 0);
+}
+
+main > article {
+    margin-top: 50px;
+}
+
+article + article {
+    border-top: 5px solid green;
 }
