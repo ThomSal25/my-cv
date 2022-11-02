@@ -68,6 +68,14 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
     border-top: 5px solid green;
 }
 
+#experiences h2 {
+    display: inline-block;
+}
+
+#experiences h3 {
+    display: inline-block;
+}
+
 #contact  { 
     background-color: lightgray;
     padding: 2rem;
