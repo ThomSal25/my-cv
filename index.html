@@ -7,11 +7,14 @@
     <meta name="description" content="Hier befindet sich der CV von Thomas Salmann"> <!-- Informationen werden auf Website angezeigt-->
     <meta name="author" content="Thomas Salmann">
     <title>CV Thomas Salmann</title>
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="reset.css">-->
+    <!--<link rel="stylesheet" href="normalize.css">-->
+    <link rel="stylesheet"  href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/>
+    <link rel="stylesheet" href="style.css"><!--reset  zerschießt mein styling. warum, wenn ich style als letzte Datei habe? wieso ist eine der anderen dominanter?-->
 </head>
 <body>
     <header class="padd1" >
-        <h1>Thomas Salmann</h1>
+        <h1 id="cv-header">Thomas Salmann</h1>
         <p id="prof-sub-head"><strong>QMB, Master of Material Engineering, Web Developer</strong> <small>(Training in progrss)</small></p>
         <nav>
             <a class="nav-class" href="#profile">Profile</a>
@@ -84,20 +87,21 @@
                 </ul>
             </section>
         </article>
+        
         <article id="contact">
             <h2>Contact</h2>
             <p>
+                
                 <address>
-                    Post: Friedrich-A.-Richter-Str. 4, 07407 Rudolstadt <br>
-                    <div></div>
-                    priv. Nr.: <a href="tel:+4901606298345">0160***345</a><br>
-                    <div></div>
-                    Mail: <a href="mailto:thomas.salmann@gmail.com">t***.com</a><br>
-                    <div></div>
+                    <ol>
+                        <li>Mail: <a href="mailto:thomas.salmann@gmail.com">t***.com</a></li>
+                        <li>Post: Friedrich-A.-Richter-Str. 4, 07407 Rudolstadt</li>
+                        <li>priv. Nr.: <a href="tel:+4901606298345">0160***345</a></li>
+                    </ol>
                 </address>
             </p>
         </article>
-        <a href="#navigation">To page head</a>
+        <a href="#cv-header">To page head</a>
     </main>
 </body>
 </html>

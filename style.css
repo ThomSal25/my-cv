@@ -1,5 +1,9 @@
 * {
     box-sizing: border-box; /* Boxgröße wird auf Border begrenzt, gilt für alle Boxes*/
+    
+}
+
+html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -64,6 +68,8 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
     border-top: 5px solid green;
 }
 
-#contact div { 
-    border: 5px solid red;
-    /*padding: 10px;} So kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
+#contact  { 
+    background-color: lightgray;
+    padding: 2rem;
+    /*padding: 10px; So kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
+}
