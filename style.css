@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6, h7 {
     font-family: 'Times New Roman', Times, serif;
 }
 
+h2 {
+    position: relative;
+    left: 10px;
+    }
+
 nav a {
     margin-left: 50px; 
 
@@ -58,10 +63,32 @@ main {
 body > header { /*nur header, der direktes child vom body ist*/
     text-align: center;
     background-color: rgb(255, 187, 0);
+    position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
+    top: 0px;
+    z-index: 10;
+}
+#hire{
+    position: absolute;
+    _border: 5px solid rgb(252, 38, 0);
+    border-radius: 2mm;
+    padding: 1rem;
+    background-color: lawngreen;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    display: inline-block;
+
 }
 
-main > article {
+#profile {
+    _border: 5px solid green;
+    _position: static;
+    _padding-top: 100px;
+    }
+
+main > article, footer > article {
     margin-top: 50px;
+    padding: 20px;
 }
 
 article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
@@ -76,8 +103,14 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
     display: inline-block;
 }
 
+footer{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 #contact  { 
     background-color: lightgray;
     padding: 2rem;
+    
     /*padding: 10px; So kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
 }
