@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box; /* Boxgröße wird auf Border begrenzt, gilt für alle Boxes*/
-    
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 html {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 ::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
@@ -17,17 +18,17 @@ html {
     content: " 🧙‍♂️" /*Windows-Taste + . für Emojis*/
 }
 
-h1, h2, h3, h4, h5, h6, h7 {
-    font-family: 'Times New Roman', Times, serif;
+h1, h2, h3,h4, h5, h6, h7 {
+    font-family: 'DM Serif Text', serif;
 }
 
 h2 {
     position: relative;
-    left: 10px;
+    left: 0.625rem;
     }
 
 nav a {
-    margin-left: 50px; 
+    margin-left: 3.125rem; 
 
 }
 
@@ -44,55 +45,66 @@ background-color: red;
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     background-color: lemonchiffon;
 }
 
 main {
-    max-width: 800px;
+    max-width: 75ch;
     margin: 0 auto; /*Das auto zentriert main in der Mitte*/ 
 }
 
 .padd1 {
-    padding: 40px;
+    padding: 2.5rem;
         /*border: 1px solid red;*/
 }
 
+.head-size {
+    font-size: 4rem;
+}
 
+.head-size > h1{
+    font-size: 1em;
+}
+
+.head-size > p {
+    font-size: 25%;
+}
 
 body > header { /*nur header, der direktes child vom body ist*/
     text-align: center;
     background-color: rgb(255, 187, 0);
     position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
-    top: 0px;
+    top: 0;
     z-index: 10;
 }
+
 #hire{
     position: absolute;
-    _border: 5px solid rgb(252, 38, 0);
+    _border: 0.3125rem solid rgb(252, 38, 0);
     border-radius: 2mm;
     padding: 1rem;
     background-color: lawngreen;
     position: absolute;
-    top: 50px;
-    right: 200px;
+    top: 3.125rem;
+    right: 12.5rem;
     display: inline-block;
 
 }
 
 #profile {
-    _border: 5px solid green;
+    _border: 0.3125rem solid green;
     _position: static;
-    _padding-top: 100px;
+    _padding-top: 6.25rem;
     }
 
 main > article, footer > article {
-    margin-top: 50px;
-    padding: 20px;
+    margin-top: 3.125rem;
+    padding: 1.25rem;
 }
 
 article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
-    border-top: 5px solid green;
+    border-top: 0.3125rem solid green;
 }
 
 #experiences h2 {
@@ -104,7 +116,7 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
 }
 
 footer{
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
