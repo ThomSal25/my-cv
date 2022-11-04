@@ -8,6 +8,33 @@ html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@media print {
+    #hire, nav  {
+        display: none;
+    }
+}
+
+@media screen and (min-width:786px) {
+    html {
+        font-size: 18px;
+    }
+    main {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    html {
+        font-size: 20px;
+    }
+    #hire {
+        position: fixed;
+    }
+    main {
+        margin-top: 6rem;
+    }
+}
+
 ::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
     :: kann nur font Eigenschaften ändern, keine Funktionen*/
     background-color: black;
@@ -88,7 +115,7 @@ body > header { /*nur header, der direktes child vom body ist*/
     position: absolute;
     top: 3.125rem;
     right: 12.5rem;
-    display: inline-block;
+    _display: inline-block; /* Wieso verhindert dies die Ausblendung bei @media screen?*/
 
 }
 
