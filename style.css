@@ -14,9 +14,13 @@ html {
     }
 }
 
-@media screen and (min-width:786px) {
+@media screen and (min-width:768px) {
     html {
         font-size: 18px;
+    }
+    nav {
+        flex-direction: row;
+        border-radius: 50px;
     }
     main {
         margin-top: 4rem;
@@ -51,11 +55,25 @@ h1, h2, h3,h4, h5, h6, h7 {
 
 h2 {
     position: relative;
-    left: 0.625rem;
+    left: -0.625rem;
+    font-size: 1.25rem;
     }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+@media screen and (min-width:768px) {
+    nav {
+        flex-direction: row;
+        }
+}
+
 nav a {
-    margin-left: 3.125rem; 
+    margin-left: 3.125rem;
+    flex-shrink: 1; 
 
 }
 
@@ -119,6 +137,12 @@ body > header { /*nur header, der direktes child vom body ist*/
 
 }
 
+@media screen and (min-width:992px) {
+    #hire {
+        position: fixed;
+    }
+}
+
 #profile {
     _border: 0.3125rem solid green;
     _position: static;
@@ -134,12 +158,20 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
     border-top: 0.3125rem solid green;
 }
 
-#experiences h2 {
+#experiences h2, #experiences h3 {
     display: inline-block;
 }
 
-#experiences h3 {
-    display: inline-block;
+.experiences  header{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:992px) {
+    .experiences  header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 footer{
