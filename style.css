@@ -6,6 +6,26 @@
 
 html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    --sel-back-col: black;
+    --sel-col: beige;
+
+    --text-color: black;
+    --head-color1: yellow;
+    --head-color2: orange;
+    --head-color3: gold;
+    --background: lemonchiffon;
+    --border: green;
+
+    --a-link: green;
+    --a-hover-background: aqua;
+    --a-active: red;
+
+    --button-background: lawngreen;
+    
+    --footer-color: blanchedalmond;
+    --footer-background1: black;
+    --footer-background2: white;
 }
 
 @media print {
@@ -41,8 +61,8 @@ html {
 
 ::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
     :: kann nur font Eigenschaften ändern, keine Funktionen*/
-    background-color: black;
-    color: beige;
+    background-color: var(--sel-back-col);
+    color: var(--sel-col);
 }
 
 #prof-sub-head::after {
@@ -78,20 +98,22 @@ nav a {
 }
 
 a:link {
-color: green;
+    color: var(--a-link);
+    transition: background-color .5s;
 }
 
 a:hover {
-background-color: aqua;
+    background-color: var(--a-hover-background);
+    
 }
 
 a:active {
-background-color: red;
+    background-color: var(--a-active);
 }
 
 body {
     margin: 0;
-    background-color: lemonchiffon;
+    background-color: var(--background);
 }
 
 main {
@@ -119,6 +141,7 @@ main {
 body > header { /*nur header, der direktes child vom body ist*/
     text-align: center;
     background-color: rgb(255, 187, 0);
+    background-image: linear-gradient(.35turn, var(--head-color1), var(--head-color2), var(--head-color3));
     position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
     top: 0;
     z-index: 10;
@@ -129,7 +152,7 @@ body > header { /*nur header, der direktes child vom body ist*/
     _border: 0.3125rem solid rgb(252, 38, 0);
     border-radius: 2mm;
     padding: 1rem;
-    background-color: lawngreen;
+    background-color: var(--button-background);
     position: absolute;
     top: 3.125rem;
     right: 12.5rem;
@@ -155,7 +178,7 @@ main > article, footer > article {
 }
 
 article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
-    border-top: 0.3125rem solid green;
+    border-top: 0.3125rem solid var(--border);
 }
 
 #experiences h2, #experiences h3 {
@@ -175,13 +198,10 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
 }
 
 footer{
-    max-width: 50rem;
+    max-width: 100%;
     margin: 0 auto;
-}
+    background-image: linear-gradient(.35turn, var(--footer-background1) 60%, var(--footer-background2));
 
-#contact  { 
-    background-color: lightgray;
-    padding: 2rem;
-    
-    /*padding: 10px; So kriege ich horizantalen Abstand hin, wenn die Links untereinander stehen?*/
+    color: var(--footer-color);
+    text-align: center;
 }
