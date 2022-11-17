@@ -4,9 +4,7 @@
     line-height: 1.5;
 }
 
-html {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+:root  {
     --sel-back-col: black;
     --sel-col: beige;
 
@@ -26,6 +24,10 @@ html {
     --footer-color: blanchedalmond;
     --footer-background1: black;
     --footer-background2: white;
+}
+
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media print {
@@ -65,19 +67,40 @@ html {
     color: var(--sel-col);
 }
 
-#prof-sub-head::after {
-    content: " 🧙‍♂️" /*Windows-Taste + . für Emojis*/
+body {
+    margin: 0;
+    background-color: var(--background);
+}
+
+body > header { /*nur header, der direktes child vom body ist*/
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    background-image: linear-gradient(.35turn, var(--head-color1), var(--head-color2), var(--head-color3));
+    _position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
+    top: 0;
+    z-index: 10;
+}
+
+.padd1 {
+    padding: 2.5rem; /*border: 1px solid red;*/
 }
 
 h1, h2, h3,h4, h5, h6, h7 {
     font-family: 'DM Serif Text', serif;
 }
 
-h2 {
-    position: relative;
-    left: -0.625rem;
-    font-size: 1.25rem;
-    }
+.head-size {
+    font-size: 4rem;
+}
+
+.head-size > h1{
+    font-size: 1em;
+}
+
+.head-size > p {
+    font-size: 25%;
+}
+
 
 nav {
     display: flex;
@@ -111,18 +134,31 @@ a:active {
     background-color: var(--a-active);
 }
 
-body {
-    margin: 0;
-    background-color: var(--background);
+.side-head:hover #hire {
+    transform: scale(1.5);
+}
+
+#hire{
+    position: fixed;
+    _border: 0.3125rem solid rgb(252, 38, 0);
+    border-radius: 2mm;
+    padding: 1rem;
+    background-color: var(--button-background);
+    top: 3.125rem;
+    right: 2rem;
+    _display: inline-block; /* Wieso verhindert dies die Ausblendung bei @media screen?*/
+    transition: transform 1s;
+}
+
+@media screen and (min-width:992px) {
+    #hire {
+        position: fixed;
+    }
 }
 
 main {
     max-width: 90ch;
     margin: 0 auto; /*Das auto zentriert main in der Mitte*/ 
-}
-
-.padd1 {
-    padding: 2.5rem; /*border: 1px solid red;*/
 }
 
 @media screen  and (min-width: 768px){
@@ -139,52 +175,6 @@ main {
     }
 }
 
-.head-size {
-    font-size: 4rem;
-}
-
-.head-size > h1{
-    font-size: 1em;
-}
-
-.head-size > p {
-    font-size: 25%;
-}
-
-body > header { /*nur header, der direktes child vom body ist*/
-    text-align: center;
-    background-color: rgb(255, 187, 0);
-    background-image: linear-gradient(.35turn, var(--head-color1), var(--head-color2), var(--head-color3));
-    _position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
-    top: 0;
-    z-index: 10;
-}
-
-#hire{
-    position: absolute;
-    _border: 0.3125rem solid rgb(252, 38, 0);
-    border-radius: 2mm;
-    padding: 1rem;
-    background-color: var(--button-background);
-    position: absolute;
-    top: 3.125rem;
-    right: 12.5rem;
-    _display: inline-block; /* Wieso verhindert dies die Ausblendung bei @media screen?*/
-
-}
-
-@media screen and (min-width:992px) {
-    #hire {
-        position: fixed;
-    }
-}
-
-#profile {
-    _border: 0.3125rem solid green;
-    _position: static;
-    _padding-top: 6.25rem;
-    }
-
 main > article, footer > article {
     margin-top: 3.125rem;
     padding: 1.25rem;
@@ -194,6 +184,19 @@ article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderf
     border-top: 0.3125rem solid var(--border);
 }
 
+
+h2 {
+    position: relative;
+    left: -0.625rem;
+    font-size: 1.25rem;
+    }
+
+#profile {
+    _border: 0.3125rem solid green;
+    _position: static;
+    _padding-top: 6.25rem;
+    }
+    
 #experiences h2, #experiences h3 {
     display: inline-block;
 }
