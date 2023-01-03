@@ -1,223 +1,235 @@
 * {
-    box-sizing: border-box; /* Boxgröße wird auf Border begrenzt, gilt für alle Boxes*/
-    font-size: 16px;
-    line-height: 1.5;
+  box-sizing: border-box; /* Boxgröße wird auf Border begrenzt, gilt für alle Boxes*/
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-:root  {
-    --sel-back-col: black;
-    --sel-col: beige;
+:root {
+  --sel-back-col: black;
+  --sel-col: beige;
 
-    --text-color: black;
-    --head-color1: yellow;
-    --head-color2: orange;
-    --head-color3: gold;
-    --background: lemonchiffon;
-    --border: green;
+  --text-color: black;
+  --head-color1: yellow;
+  --head-color2: orange;
+  --head-color3: gold;
+  --background: lemonchiffon;
+  --border: green;
 
-    --a-link: green;
-    --a-hover-background: aqua;
-    --a-active: red;
+  --a-link: green;
+  --a-hover-background: aqua;
+  --a-active: red;
 
-    --button-background: lawngreen;
-    
-    --footer-color: blanchedalmond;
-    --footer-background1: black;
-    --footer-background2: white;
+  --button-background: lawngreen;
+
+  --footer-color: blanchedalmond;
+  --footer-background1: black;
+  --footer-background2: white;
 }
 
 html {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 @media print {
-    #hire, nav  {
-        display: none;
-    }
+  #hire,
+  nav {
+    display: none;
+  }
 }
 
-@media screen and (min-width:768px) {
-    html {
-        font-size: 18px;
-    }
-    nav {
-        flex-direction: row;
-        border-radius: 50px;
-    }
-    main {
-        margin-top: 4rem;
-    }
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  nav {
+    flex-direction: row;
+    border-radius: 50px;
+  }
+  main {
+    margin-top: 4rem;
+  }
 }
 
-@media screen and (min-width:992px) {
-    html {
-        font-size: 20px;
-    }
-    #hire {
-        position: fixed;
-    }
-    main {
-        margin-top: 6rem;
-    }
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+  #hire {
+    position: fixed;
+  }
+  main {
+    margin-top: 6rem;
+  }
 }
 
-::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
-    :: kann nur font Eigenschaften ändern, keine Funktionen*/
-    background-color: var(--sel-back-col);
-    color: var(--sel-col);
+::selection {
+  /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
+      :: kann nur font Eigenschaften ändern, keine Funktionen*/
+  background-color: var(--sel-back-col);
+  color: var(--sel-col);
 }
 
 body {
-    margin: 0;
-    background-color: var(--background);
+  margin: 0;
+  background-color: var(--background);
 }
 
-body > header { /*nur header, der direktes child vom body ist*/
-    text-align: center;
-    background-color: rgb(255, 187, 0);
-    background-image: linear-gradient(.35turn, var(--head-color1), var(--head-color2), var(--head-color3));
-    _position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
-    top: 0;
-    z-index: 10;
+body > header {
+  /*nur header, der direktes child vom body ist*/
+  text-align: center;
+  background-color: rgb(255, 187, 0);
+  background-image: linear-gradient(
+    0.35turn,
+    var(--head-color1),
+    var(--head-color2),
+    var(--head-color3)
+  );
+  _position: sticky; /*bleibt dank top: 0px immer am oberen Rand stehen*/
+  top: 0;
+  z-index: 10;
 }
 
 .padd1 {
-    padding: 2.5rem; /*border: 1px solid red;*/
+  padding: 2.5rem; /*border: 1px solid red;*/
 }
 
-h1, h2, h3,h4, h5, h6, h7 {
-    font-family: 'DM Serif Text', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-family: "DM Serif Text", serif;
 }
 
 .head-size {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
-.head-size > h1{
-    font-size: 1em;
+.head-size > h1 {
+  font-size: 1em;
 }
 
 .head-size > p {
-    font-size: 25%;
+  font-size: 25%;
 }
 
-
 nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-@media screen and (min-width:768px) {
-    nav {
-        flex-direction: row;
-        }
+nav ul {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
 }
 
 nav a {
-    margin-left: 3.125rem;
-    flex-shrink: 1; 
-
+  margin-left: 3.125rem;
+  flex-shrink: 1;
 }
 
 a:link {
-    color: var(--a-link);
-    transition: background-color .5s;
+  color: var(--a-link);
+  transition: background-color 0.5s;
 }
 
 a:hover {
-    background-color: var(--a-hover-background);
-    
+  background-color: var(--a-hover-background);
 }
 
 a:active {
-    background-color: var(--a-active);
+  background-color: var(--a-active);
 }
 
 .side-head:hover #hire {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
-#hire{
+#hire {
+  position: fixed;
+  border-radius: 2mm;
+  padding: 1rem;
+  background-color: var(--button-background);
+  top: 3.125rem;
+  right: 2rem;
+  display: none;
+  transition: transform 1s;
+}
+
+@media screen and (min-width: 992px) {
+  #hire {
     position: fixed;
-    _border: 0.3125rem solid rgb(252, 38, 0);
-    border-radius: 2mm;
-    padding: 1rem;
-    background-color: var(--button-background);
-    top: 3.125rem;
-    right: 2rem;
-    _display: inline-block; /* Wieso verhindert dies die Ausblendung bei @media screen?*/
-    transition: transform 1s;
-}
-
-@media screen and (min-width:992px) {
-    #hire {
-        position: fixed;
-    }
+    display: inline-block;
+  }
 }
 
 main {
-    max-width: 90ch;
-    margin: 0 auto; /*Das auto zentriert main in der Mitte*/ 
+  max-width: 90ch;
+  margin: 0 auto; /*Das auto zentriert main in der Mitte*/
 }
 
-@media screen  and (min-width: 768px){
-    .main-article {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 2.5rem 1fr;
-    }
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2.5rem 1fr;
+  }
 
-    .grid-content{
-        _border: 5px dashed blue;
-        grid-column-start: 2;
-        grid-row-start: 2;
-    }
+  .grid-content {
+    _border: 5px dashed blue;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
 }
 
-main > article, footer > article {
-    margin-top: 3.125rem;
-    padding: 1.25rem;
+main > article,
+footer > article {
+  margin-top: 3.125rem;
+  padding: 1.25rem;
 }
 
-article + article { /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
-    border-top: 0.3125rem solid var(--border);
+article + article {
+  /*Eule, setzt grünen Streifen nur zwischen die aufeinanderfolgenden Artikel, nicht über den ersten*/
+  border-top: 0.3125rem solid var(--border);
 }
-
 
 h2 {
-    position: relative;
-    left: -0.625rem;
-    font-size: 1.25rem;
-    }
+  position: relative;
+  left: -0.625rem;
+  font-size: 1.25rem;
+}
 
 #profile {
-    _border: 0.3125rem solid green;
-    _position: static;
-    _padding-top: 6.25rem;
-    }
-    
-#experiences h2, #experiences h3 {
-    display: inline-block;
+  _border: 0.3125rem solid green;
+  _position: static;
+  _padding-top: 6.25rem;
 }
 
-.experiences  header{
+@media screen and (min-width: 992px) {
+  .experiences header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-@media screen and (min-width:992px) {
-    .experiences  header{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
+footer {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(
+    0.35turn,
+    var(--footer-background1) 60%,
+    var(--footer-background2)
+  );
 
-footer{
-    max-width: 100%;
-    margin: 0 auto;
-    background-image: linear-gradient(.35turn, var(--footer-background1) 60%, var(--footer-background2));
-
-    color: var(--footer-color);
-    text-align: center;
+  color: var(--footer-color);
+  text-align: center;
 }
